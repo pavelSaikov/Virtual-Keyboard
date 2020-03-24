@@ -1,32 +1,32 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: './src/index.js',
     output: {
-        filename: "main.js",
-        path: path.resolve(__dirname, "./dist")
+        filename: 'main.js',
+        path: path.resolve(__dirname, './dist'),
     },
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader"]
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
             {
                 test: /\.scss$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
-            }
-        ]
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            },
+        ],
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: "./src/index.html" }),
-        new MiniCssExtractPlugin({ filename: "style.css" })
+        new HtmlWebpackPlugin({ template: './src/index.html' }),
+        new MiniCssExtractPlugin({ filename: 'style.css' }),
     ],
     devServer: {
-        contentBase: path.join(__dirname, ""),
+        contentBase: path.join(__dirname, ''),
         compress: true,
-        port: 3000
-    }
+        port: 3000,
+    },
 };
