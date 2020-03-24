@@ -1,2 +1,1 @@
-import './index.scss';
-console.log();
+import "./index.scss";
