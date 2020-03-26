@@ -1,5 +1,5 @@
 export default class Button {
-  constructor(properties, classes, state, onButtonDown, onButtonUp) {
+  constructor(properties, state, onButtonDown, onButtonUp, ...classes) {
     this.state = state;
     this.properties = properties;
 
@@ -7,7 +7,7 @@ export default class Button {
     for (let i = 0; i < classes.length; i += 1) {
       this.domElement.classList.add(classes[i]);
     }
-    this.domElement.innerText = this.properties.RU.SHIFT;
+    this.domElement.innerHTML = this.properties.RU.SHIFT_OFF;
     this.domElement.onButtonDown = onButtonDown;
     this.domElement.onButtonUp = onButtonUp;
 

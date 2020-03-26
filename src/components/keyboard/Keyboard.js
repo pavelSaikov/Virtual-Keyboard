@@ -22,27 +22,236 @@ class Keyboard {
     this.createFirstRow();
     this.domElement.append(this.firstRow);
 
-    // this.createSecondRow();
-    // this.domElement.append(this.secondRow);
+    this.createSecondRow();
+    this.domElement.append(this.secondRow);
 
-    // createThirdRow();
-    // createFourthRow();
-    // createFifthRow();
+    this.createThirdRow();
+    this.domElement.append(this.thirdRow);
+
+    this.createFourthRow();
+    this.domElement.append(this.fourthRow);
+
+    this.createFifthRow();
+    this.domElement.append(this.fifthRow);
   }
 
   createFirstRow() {
     this.firstRow = Keyboard.createRowDomElement();
-    for (let i = 0; i < KEYBOARD_CLASSES.ROW.length; i += 1) {
-      this.firstRow.classList.add(KEYBOARD_CLASSES.ROW[i]);
-    }
+    this.firstRow.classList.add('first-row');
 
-    const TILDA = new Button(BUTTON_MODELS['~'], BUTTON_CLASSES.TEXT_BUTTON, buttonDown, buttonUp);
+    const TILDA = new Button(BUTTON_MODELS['~'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Backquote');
     this.firstRow.append(TILDA.getButton());
 
-    const ONE = new Button(BUTTON_MODELS['1'], BUTTON_CLASSES.TEXT_BUTTON, buttonDown, buttonUp);
+    const ONE = new Button(BUTTON_MODELS['1'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Digit1');
     this.firstRow.append(ONE.getButton());
 
-    // return firstRow;
+    const TWO = new Button(BUTTON_MODELS['2'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Digit2');
+    this.firstRow.append(TWO.getButton());
+
+    const THREE = new Button(BUTTON_MODELS['3'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Digit3');
+    this.firstRow.append(THREE.getButton());
+
+    const FOUR = new Button(BUTTON_MODELS['4'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Digit4');
+    this.firstRow.append(FOUR.getButton());
+
+    const FIVE = new Button(BUTTON_MODELS['5'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Digit5');
+    this.firstRow.append(FIVE.getButton());
+
+    const SIX = new Button(BUTTON_MODELS['6'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Digit6');
+    this.firstRow.append(SIX.getButton());
+
+    const SEVEN = new Button(BUTTON_MODELS['7'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Digit7');
+    this.firstRow.append(SEVEN.getButton());
+
+    const EIGHT = new Button(BUTTON_MODELS['8'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Digit8');
+    this.firstRow.append(EIGHT.getButton());
+
+    const NINE = new Button(BUTTON_MODELS['9'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Digit9');
+    this.firstRow.append(NINE.getButton());
+
+    const ZERO = new Button(BUTTON_MODELS['0'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Digit0');
+    this.firstRow.append(ZERO.getButton());
+
+    const MINUS = new Button(BUTTON_MODELS.MINUS, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Minus');
+    this.firstRow.append(MINUS.getButton());
+
+    const PLUS = new Button(BUTTON_MODELS.PLUS, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Equal');
+    this.firstRow.append(PLUS.getButton());
+
+    const BACKSPACE = new Button(BUTTON_MODELS.BACKSPACE, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'Backspace');
+    this.firstRow.append(BACKSPACE.getButton());
+  }
+
+  createSecondRow() {
+    this.secondRow = Keyboard.createRowDomElement();
+    this.secondRow.classList.add('second-row');
+
+    const TAB = new Button(BUTTON_MODELS.TAB, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'Tab');
+    this.secondRow.append(TAB.getButton());
+
+    const Q = new Button(BUTTON_MODELS.Q, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyQ');
+    this.secondRow.append(Q.getButton());
+
+    const W = new Button(BUTTON_MODELS.W, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyW');
+    this.secondRow.append(W.getButton());
+
+    const E = new Button(BUTTON_MODELS.E, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyE');
+    this.secondRow.append(E.getButton());
+
+    const R = new Button(BUTTON_MODELS.R, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyR');
+    this.secondRow.append(R.getButton());
+
+    const T = new Button(BUTTON_MODELS.T, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyT');
+    this.secondRow.append(T.getButton());
+
+    const Y = new Button(BUTTON_MODELS.Y, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyY');
+    this.secondRow.append(Y.getButton());
+
+    const U = new Button(BUTTON_MODELS.U, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyU');
+    this.secondRow.append(U.getButton());
+
+    const I = new Button(BUTTON_MODELS.I, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyI');
+    this.secondRow.append(I.getButton());
+
+    const O = new Button(BUTTON_MODELS.O, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyO');
+    this.secondRow.append(O.getButton());
+
+    const P = new Button(BUTTON_MODELS.P, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyP');
+    this.secondRow.append(P.getButton());
+
+    const BRACKET_LEFT = new Button(BUTTON_MODELS['['], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'BracketLeft');
+    this.secondRow.append(BRACKET_LEFT.getButton());
+
+    const BRACKET_RIGHT = new Button(BUTTON_MODELS[']'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'BracketRight');
+    this.secondRow.append(BRACKET_RIGHT.getButton());
+
+    const BACKSLASH = new Button(BUTTON_MODELS['\\'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Backslash');
+    this.secondRow.append(BACKSLASH.getButton());
+
+    const DELETE = new Button(BUTTON_MODELS.DELETE, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'Delete');
+    this.secondRow.append(DELETE.getButton());
+  }
+
+  createThirdRow() {
+    this.thirdRow = Keyboard.createRowDomElement();
+    this.thirdRow.classList.add('third-row');
+
+    const CAPS_LOCK = new Button(BUTTON_MODELS.CAPSLOCK, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'CapsLock');
+    this.thirdRow.append(CAPS_LOCK.getButton());
+
+    const A = new Button(BUTTON_MODELS.A, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyA');
+    this.thirdRow.append(A.getButton());
+
+    const S = new Button(BUTTON_MODELS.S, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyS');
+    this.thirdRow.append(S.getButton());
+
+    const D = new Button(BUTTON_MODELS.D, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyD');
+    this.thirdRow.append(D.getButton());
+
+    const F = new Button(BUTTON_MODELS.F, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyF');
+    this.thirdRow.append(F.getButton());
+
+    const G = new Button(BUTTON_MODELS.G, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyG');
+    this.thirdRow.append(G.getButton());
+
+    const H = new Button(BUTTON_MODELS.H, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyH');
+    this.thirdRow.append(H.getButton());
+
+    const J = new Button(BUTTON_MODELS.J, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyJ');
+    this.thirdRow.append(J.getButton());
+
+    const K = new Button(BUTTON_MODELS.K, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyK');
+    this.thirdRow.append(K.getButton());
+
+    const L = new Button(BUTTON_MODELS.L, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyL');
+    this.thirdRow.append(L.getButton());
+
+    const SEMICOLON = new Button(BUTTON_MODELS[';'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Semicolon');
+    this.thirdRow.append(SEMICOLON.getButton());
+
+    const QUOTE = new Button(BUTTON_MODELS["'"], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Quote');
+    this.thirdRow.append(QUOTE.getButton());
+
+    const ENTER = new Button(BUTTON_MODELS.ENTER, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'Enter');
+    this.thirdRow.append(ENTER.getButton());
+  }
+
+  createFourthRow() {
+    this.fourthRow = Keyboard.createRowDomElement();
+    this.fourthRow.classList.add('fourth-row');
+    const LEFT_SHIFT = new Button(BUTTON_MODELS.SHIFT, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'ShiftLeft');
+    this.fourthRow.append(LEFT_SHIFT.getButton());
+
+    const INTL_BACK_SLASH = new Button(BUTTON_MODELS['\\'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'IntlBackslash');
+    this.fourthRow.append(INTL_BACK_SLASH.getButton());
+
+    const Z = new Button(BUTTON_MODELS.Z, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyZ');
+    this.fourthRow.append(Z.getButton());
+
+    const X = new Button(BUTTON_MODELS.X, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyX');
+    this.fourthRow.append(X.getButton());
+
+    const C = new Button(BUTTON_MODELS.C, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyC');
+    this.fourthRow.append(C.getButton());
+
+    const V = new Button(BUTTON_MODELS.V, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyV');
+    this.fourthRow.append(V.getButton());
+
+    const B = new Button(BUTTON_MODELS.B, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyB');
+    this.fourthRow.append(B.getButton());
+
+    const N = new Button(BUTTON_MODELS.N, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyN');
+    this.fourthRow.append(N.getButton());
+
+    const M = new Button(BUTTON_MODELS.M, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'KeyM');
+    this.fourthRow.append(M.getButton());
+
+    const COMMA = new Button(BUTTON_MODELS['<'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Comma');
+    this.fourthRow.append(COMMA.getButton());
+
+    const PERIOD = new Button(BUTTON_MODELS['>'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Period');
+    this.fourthRow.append(PERIOD.getButton());
+
+    const SLASH = new Button(BUTTON_MODELS['/'], this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.TEXT_BUTTON, 'Slash');
+    this.fourthRow.append(SLASH.getButton());
+
+    const ARROW_UP = new Button(BUTTON_MODELS.ARROW_UP, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'arrow', 'ArrowUp');
+    this.fourthRow.append(ARROW_UP.getButton());
+
+    const RIGHT_SHIFT = new Button(BUTTON_MODELS.SHIFT, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'ShiftRight');
+    this.fourthRow.append(RIGHT_SHIFT.getButton());
+  }
+
+  createFifthRow() {
+    this.fifthRow = Keyboard.createRowDomElement();
+    this.fifthRow.classList.add('fifth-row');
+
+    const LEFT_CTRL = new Button(BUTTON_MODELS.CTRL, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'ControlLeft', 'control');
+    this.fifthRow.append(LEFT_CTRL.getButton());
+
+    const LEFT_META = new Button(BUTTON_MODELS.WIN, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'MetaLeft', 'meta');
+    this.fifthRow.append(LEFT_META.getButton());
+
+    const LEFT_ALT = new Button(BUTTON_MODELS.ALT, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'AltLeft', 'alt');
+    this.fifthRow.append(LEFT_ALT.getButton());
+
+    const SPACE = new Button(BUTTON_MODELS.SPACE, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'Space');
+    this.fifthRow.append(SPACE.getButton());
+
+    const RIGHT_ALT = new Button(BUTTON_MODELS.ALT, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'AltRight', 'alt');
+    this.fifthRow.append(RIGHT_ALT.getButton());
+
+    const RIGHT_CTRL = new Button(BUTTON_MODELS.CTRL, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'ControlRight', 'control');
+    this.fifthRow.append(RIGHT_CTRL.getButton());
+
+    const ARROW_LEFT = new Button(BUTTON_MODELS.ARROW_LEFT, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'ArrowLeft', 'arrow');
+    this.fifthRow.append(ARROW_LEFT.getButton());
+
+    const ARROW_DOWN = new Button(BUTTON_MODELS.ARROW_DOWN, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'ArrowDown', 'arrow');
+    this.fifthRow.append(ARROW_DOWN.getButton());
+
+    const ARROW_RIGHT = new Button(BUTTON_MODELS.ARROW_RIGHT, this.status, buttonDown, buttonUp, ...BUTTON_CLASSES.SERVICE_BUTTON, 'ArrowRight', 'arrow');
+    this.fifthRow.append(ARROW_RIGHT.getButton());
   }
 
   static createRowDomElement() {

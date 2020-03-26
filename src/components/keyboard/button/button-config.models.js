@@ -29,7 +29,6 @@ const BUTTONS_CONFIG = {
   P: { RU: { SHIFT_OFF: 'з', SHIFT_ON: 'З' }, EN: { SHIFT_OFF: 'p', SHIFT_ON: 'P' } },
   '[': { RU: { SHIFT_OFF: 'х', SHIFT_ON: 'Х' }, EN: { SHIFT_OFF: '[', SHIFT_ON: '{' } },
   ']': { RU: { SHIFT_OFF: 'ъ', SHIFT_ON: 'Ъ' }, EN: { SHIFT_OFF: ']', SHIFT_ON: '}' } },
-  '\\': { RU: { SHIFT_OFF: '\\', SHIFT_ON: '/' }, EN: { SHIFT_OFF: '\\', SHIFT_ON: '|' } },
   DELETE: { RU: { SHIFT_OFF: 'Del', SHIFT_ON: 'Del' }, EN: { SHIFT_OFF: 'Del', SHIFT_ON: 'Del' } },
   CAPSLOCK: {
     RU: { SHIFT_OFF: 'Caps Lock', SHIFT_ON: 'Caps Lock' },
@@ -45,7 +44,8 @@ const BUTTONS_CONFIG = {
   K: { RU: { SHIFT_OFF: 'л', SHIFT_ON: 'Л' }, EN: { SHIFT_OFF: 'k', SHIFT_ON: 'K' } },
   L: { RU: { SHIFT_OFF: 'д', SHIFT_ON: 'Д' }, EN: { SHIFT_OFF: 'l', SHIFT_ON: 'L' } },
   ';': { RU: { SHIFT_OFF: 'ж', SHIFT_ON: 'Ж' }, EN: { SHIFT_OFF: ';', SHIFT_ON: ':' } },
-  "'": { RU: { SHIFT_OFF: 'э', SHIFT_ON: 'Э' }, EN: { SHIFT_OFF: "'", SHIFT_ON: '"' } },
+  '\'': { RU: { SHIFT_OFF: 'э', SHIFT_ON: 'Э' }, EN: { SHIFT_OFF: '\'', SHIFT_ON: '"' } },
+  '\\': { RU: { SHIFT_OFF: '\\', SHIFT_ON: '/' }, EN: { SHIFT_OFF: '\\', SHIFT_ON: '|' } },
   ENTER: { RU: { SHIFT_OFF: 'Enter', SHIFT_ON: 'Enter' }, EN: { SHIFT_OFF: 'Enter', SHIFT_ON: 'Enter' } },
   SHIFT: { RU: { SHIFT_OFF: 'Shift', SHIFT_ON: 'Shift' }, EN: { SHIFT_OFF: 'Shift', SHIFT_ON: 'Shift' } },
   Z: { RU: { SHIFT_OFF: 'я', SHIFT_ON: 'Я' }, EN: { SHIFT_OFF: 'z', SHIFT_ON: 'Z' } },
@@ -60,6 +60,12 @@ const BUTTONS_CONFIG = {
   '/': { RU: { SHIFT_OFF: '.', SHIFT_ON: ',' }, EN: { SHIFT_OFF: '/', SHIFT_ON: '?' } },
   CTRL: { RU: { SHIFT_OFF: 'Ctrl', SHIFT_ON: 'Ctrl' }, EN: { SHIFT_OFF: 'Ctrl', SHIFT_ON: 'Ctrl' } },
   ALT: { RU: { SHIFT_OFF: 'Alt', SHIFT_ON: 'Alt' }, EN: { SHIFT_OFF: 'Alt', SHIFT_ON: 'Alt' } },
+  ARROW_UP: { RU: { SHIFT_OFF: '&#9650', SHIFT_ON: '&#9650' }, EN: { SHIFT_OFF: '&#9650', SHIFT_ON: '&#9650' } },
+  ARROW_DOWN: { RU: { SHIFT_OFF: '&#9660;', SHIFT_ON: '&#9660;' }, EN: { SHIFT_OFF: '&#9660;', SHIFT_ON: '&#9660;' } },
+  ARROW_LEFT: { RU: { SHIFT_OFF: '&#9668;', SHIFT_ON: '&#9668;' }, EN: { SHIFT_OFF: '&#9668;', SHIFT_ON: '&#9668;' } },
+  ARROW_RIGHT: { RU: { SHIFT_OFF: '&#9658;', SHIFT_ON: '&#9658;' }, EN: { SHIFT_OFF: '&#9658;', SHIFT_ON: '&#9658;' } },
+  WIN: { RU: { SHIFT_OFF: 'WIN', SHIFT_ON: 'WIN' }, EN: { SHIFT_OFF: 'WIN', SHIFT_ON: 'WIN' } },
+  SPACE: { RU: { SHIFT_OFF: '', SHIFT_ON: '' }, EN: { SHIFT_OFF: '', SHIFT_ON: '' } },
 };
 
 export default BUTTONS_CONFIG;

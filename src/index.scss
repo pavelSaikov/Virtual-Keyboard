@@ -1,39 +1,99 @@
 body {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .wrapper {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 1020px;
-    height: 1000px;
-    border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1020px;
+  height: 1000px;
+  border: 2px solid black;
 }
 
 .text-area {
-    width: 800px;
-    height: 300px;
-    border: 2px solid black;
+  width: 800px;
+  height: 300px;
+  border: 2px solid black;
 }
 
 .keyboard {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.row{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+.keyboard-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.text-button,
+.service-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+
+  border: 1px solid black;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .text-button {
+  background-color: rgb(43, 92, 43);
+}
+
+.service-button {
+  width: 150px;
+  background-color: rgb(87, 90, 139);
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+}
+
+.second-row{
+    & > .Tab {
+        width: 75px;
+    }
+
+    & > .Delete {
+        width: 85px;
+    }
+}
+
+.third-row {
+  & > .Enter {
+      width: 110px;
+  }
+}
+
+.fourth-row {
+  & > .ShiftRight {
+    width: 48px;
+  }
+}
+
+.fifth-row {
+  & > .Space {
+    width: 430px;
+  }
+
+  & > .alt,
+  .meta {
     width: 50px;
-    height: 50px;
-    background-color: rgb(43, 92, 43);
+  }
+
+  & > .control {
+    width: 85px;
+  }
 }
