@@ -49,11 +49,17 @@ body {
 
 .text-button {
   background-color: rgb(43, 92, 43);
+  &.down {
+      background-color: orange;
+  }
 }
 
 .service-button {
   width: 150px;
   background-color: rgb(87, 90, 139);
+  &.down {
+      background-color: sandybrown;
+  }
 }
 
 .arrow {

@@ -65,7 +65,7 @@ const BUTTONS_CONFIG = {
   ARROW_LEFT: { RU: { SHIFT_OFF: '&#9668;', SHIFT_ON: '&#9668;' }, EN: { SHIFT_OFF: '&#9668;', SHIFT_ON: '&#9668;' } },
   ARROW_RIGHT: { RU: { SHIFT_OFF: '&#9658;', SHIFT_ON: '&#9658;' }, EN: { SHIFT_OFF: '&#9658;', SHIFT_ON: '&#9658;' } },
   WIN: { RU: { SHIFT_OFF: 'WIN', SHIFT_ON: 'WIN' }, EN: { SHIFT_OFF: 'WIN', SHIFT_ON: 'WIN' } },
-  SPACE: { RU: { SHIFT_OFF: '', SHIFT_ON: '' }, EN: { SHIFT_OFF: '', SHIFT_ON: '' } },
+  SPACE: { RU: { SHIFT_OFF: ' ', SHIFT_ON: ' ' }, EN: { SHIFT_OFF: ' ', SHIFT_ON: ' ' } },
 };
 
 export default BUTTONS_CONFIG;
