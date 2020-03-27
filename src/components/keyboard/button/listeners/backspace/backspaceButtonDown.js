@@ -3,10 +3,6 @@ export default function backspaceButtonDown() {
 
   const textArea = document.querySelector('.text-area');
 
-  let contentTextArea = textArea.innerHTML;
-  if (contentTextArea.length !== 0) {
-    contentTextArea = contentTextArea.substr(0, contentTextArea.length - 1);
-  }
-
-  textArea.innerHTML = contentTextArea;
+  const cursorPosition = textArea.selectionStart;
+  if (cursorPosition !== 0) textArea.setRangeText('', cursorPosition - 1, cursorPosition, 'end');
 }

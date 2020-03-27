@@ -3,8 +3,8 @@ export default function enterButtonDown() {
 
   const textArea = document.querySelector('.text-area');
 
-  let contentTextArea = textArea.innerHTML;
-  contentTextArea += '\n';
+  const cursorPosition = textArea.selectionStart;
+  textArea.setRangeText('\n', cursorPosition, cursorPosition, 'end');
 
-  textArea.innerHTML = contentTextArea;
+  //   textArea.innerHTML = contentTextArea;
 }

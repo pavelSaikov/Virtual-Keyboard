@@ -14,7 +14,7 @@ const BUTTONS_CONFIG = {
   PLUS: { RU: { SHIFT_OFF: '=', SHIFT_ON: '+' }, EN: { SHIFT_OFF: '=', SHIFT_ON: '+' } },
   BACKSPACE: {
     RU: { SHIFT_OFF: 'Backspace', SHIFT_ON: 'Backspace' },
-    EN: { SHIFT_OFF: 'BackSpace', SHIFT_ON: 'Backspace' },
+    EN: { SHIFT_OFF: 'Backspace', SHIFT_ON: 'Backspace' },
   },
   TAB: { RU: { SHIFT_OFF: 'Tab', SHIFT_ON: 'Tab' }, EN: { SHIFT_OFF: 'Tab', SHIFT_ON: 'Tab' } },
   Q: { RU: { SHIFT_OFF: 'й', SHIFT_ON: 'Й' }, EN: { SHIFT_OFF: 'q', SHIFT_ON: 'Q' } },
@@ -44,7 +44,7 @@ const BUTTONS_CONFIG = {
   K: { RU: { SHIFT_OFF: 'л', SHIFT_ON: 'Л' }, EN: { SHIFT_OFF: 'k', SHIFT_ON: 'K' } },
   L: { RU: { SHIFT_OFF: 'д', SHIFT_ON: 'Д' }, EN: { SHIFT_OFF: 'l', SHIFT_ON: 'L' } },
   ';': { RU: { SHIFT_OFF: 'ж', SHIFT_ON: 'Ж' }, EN: { SHIFT_OFF: ';', SHIFT_ON: ':' } },
-  '\'': { RU: { SHIFT_OFF: 'э', SHIFT_ON: 'Э' }, EN: { SHIFT_OFF: '\'', SHIFT_ON: '"' } },
+  "'": { RU: { SHIFT_OFF: 'э', SHIFT_ON: 'Э' }, EN: { SHIFT_OFF: "'", SHIFT_ON: '"' } },
   '\\': { RU: { SHIFT_OFF: '\\', SHIFT_ON: '/' }, EN: { SHIFT_OFF: '\\', SHIFT_ON: '|' } },
   ENTER: { RU: { SHIFT_OFF: 'Enter', SHIFT_ON: 'Enter' }, EN: { SHIFT_OFF: 'Enter', SHIFT_ON: 'Enter' } },
   SHIFT: { RU: { SHIFT_OFF: 'Shift', SHIFT_ON: 'Shift' }, EN: { SHIFT_OFF: 'Shift', SHIFT_ON: 'Shift' } },

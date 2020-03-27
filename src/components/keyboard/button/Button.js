@@ -1,6 +1,5 @@
 export default class Button {
   constructor(properties, state, onButtonDown, onButtonUp, ...classes) {
-    // this.state = state;
     this.properties = properties;
 
     this.domElement = document.createElement('div');

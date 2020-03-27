@@ -1,3 +1,1 @@
-export default function capsLockButtonUp() {
-//   this.classList.remove('down');
-}
+export default function capsLockButtonUp() {}

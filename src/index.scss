@@ -24,6 +24,9 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  & > * {
+    user-select: none;
+  }
 }
 
 .keyboard-row {
@@ -50,7 +53,7 @@ body {
 .text-button {
   background-color: rgb(43, 92, 43);
   &.down {
-      background-color: orange;
+    background-color: orange;
   }
 }
 
@@ -58,7 +61,7 @@ body {
   width: 150px;
   background-color: rgb(87, 90, 139);
   &.down {
-      background-color: sandybrown;
+    background-color: sandybrown;
   }
 }
 
@@ -67,26 +70,30 @@ body {
   height: 50px;
 }
 
-.second-row{
-    & > .Tab {
-        width: 75px;
-    }
+.second-row {
+  & > .Tab {
+    width: 75px;
+  }
 
-    & > .Delete {
-        width: 85px;
-    }
+  & > .Delete {
+    width: 85px;
+  }
 }
 
 .third-row {
   & > .Enter {
-      width: 110px;
+    width: 110px;
   }
 }
 
 .fourth-row {
-  & > .ShiftRight {
-    width: 48px;
+  & > .ShiftLeft {
+    width: 80px;
   }
+
+  //   & > .ShiftRight {
+  //     width: 150px;
+  //   }
 }
 
 .fifth-row {
