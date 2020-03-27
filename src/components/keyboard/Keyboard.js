@@ -455,6 +455,7 @@ class Keyboard {
     this.thirdRow.append(SEMICOLON.getButton());
 
     const QUOTE = new Button(
+      // eslint-disable-next-line quotes
       BUTTON_MODELS["'"],
       this.state,
       textButtonDown,
