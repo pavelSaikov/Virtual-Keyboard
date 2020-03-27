@@ -1,49 +1,42 @@
+// import { DEFAULT_STATE, LANGUAGE, SHIFT_MODE } from './state.models';
+const LANGUAGE = { RU: 'RU', EN: 'EN' };
+const SHIFT_MODE = { SHIFT_OFF: 'SHIFT_OFF', SHIFT_ON: 'SHIFT_ON' };
+
+const DEFAULT_STATE = { lang: LANGUAGE.EN, shiftMode: SHIFT_MODE.SHIFT_OFF };
+
 class State {
   constructor() {
     this.subscribers = [];
-    // this.languageMod = { RU: 'RU', EN: 'EN' };
-    this.currentLanguageMode = 'RU';
-    // this.shiftMod = { SHIFT_OFF: 'SHIFT_OFF', SHIFT_ON: 'SHIFT_ON' };
-    this.currentShiftMode = 'SHIFT_OFF';
+    this.state = DEFAULT_STATE;
   }
 
   changeLanguage() {
-    if (this.currentLanguageMode === 'RU') this.currentLanguageMode = 'EN';
-    else this.currentLanguageMode = 'RU';
-
+    this.state = {
+      ...this.state,
+      lang: this.state.lang === LANGUAGE.EN ? LANGUAGE.RU : LANGUAGE.EN,
+    };
     this.notifySubscribes();
   }
 
   changeShiftMode() {
-    if (this.currentShiftMode === 'SHIFT_OFF') this.currentShiftMode = 'SHIFT_ON';
-    else this.currentShiftMode = 'SHIFT_OFF';
-
-    this.notifySubscribes();
-  }
-
-  shiftPressed() {
-    let inverseShiftMode = '';
-    if (this.currentShiftMode === 'SHIFT_OFF') inverseShiftMode = 'SHIFT_ON';
-    else inverseShiftMode = 'SHIFT_OFF';
-
-    for (let i = 0; i < this.subscribers.length; i += 1) {
-      this.subscribers[i]({ lang: this.currentLanguageMode, shiftMode: inverseShiftMode });
-    }
-  }
-
-  shiftReleased() {
+    this.state = {
+      ...this.state,
+      shiftMode:
+        this.state.shiftMode === SHIFT_MODE.SHIFT_ON ? SHIFT_MODE.SHIFT_OFF : SHIFT_MODE.SHIFT_ON,
+    };
     this.notifySubscribes();
   }
 
   notifySubscribes() {
-    for (let i = 0; i < this.subscribers.length; i += 1) {
-      this.subscribers[i]({ lang: this.currentLanguageMode, shiftMode: this.currentShiftMode });
-    }
+    this.subscribers.forEach((subscriber) => subscriber(this.state));
   }
 
-  subscribe(func) {
-    this.subscribers.push(func);
+  subscribe(subscriber) {
+    this.subscribers.push(subscriber);
+    subscriber(this.state);
   }
 }
 
-export default State;
+const state = new State();
+
+export default state;

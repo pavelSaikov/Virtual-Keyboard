@@ -27,8 +27,6 @@ body {
   width: 100%;
   padding: 10px 10px 20px 10px;
   box-sizing: border-box;
-  //   padding-top: 10px;
-  //   padding-bottom: 20px;
   border: 5px solid black;
   border-radius: 5px;
   background-color: #888888;
@@ -45,8 +43,7 @@ body {
   margin-top: 10px;
 }
 
-.text-button,
-.service-button {
+.text-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,16 +53,11 @@ body {
   border-radius: 3px;
   cursor: pointer;
   transition: 0.25s;
-  &.down {
-    border-radius: 18px;
-  }
-}
-
-.text-button {
   font-size: 19px;
   background-color: #444444;
   &.down {
     background-color: #79aa89;
+    border-radius: 18px;
   }
 }
 

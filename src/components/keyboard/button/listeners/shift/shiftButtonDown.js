@@ -1,6 +1,5 @@
-export default function shiftButtonDown() {
-  if (!this.classList.contains('down')) this.classList.add('down');
-  this.classList.add('down');
+import state from '../../../../state/State';
 
-  this.state.shiftPressed();
+export default function shiftButtonDown() {
+  state.changeShiftMode();
 }

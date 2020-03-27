@@ -1,19 +1,23 @@
 export default class Button {
-  constructor(properties, state, onButtonDown, onButtonUp, ...classes) {
-    this.properties = properties;
-
+  constructor({
+    content,
+    state,
+    onButtonDown = (b) => b,
+    onButtonUp = (b) => b,
+    styleClasses,
+  }) {
     this.domElement = document.createElement('div');
-    for (let i = 0; i < classes.length; i += 1) {
-      this.domElement.classList.add(classes[i]);
+    this.domElement.classList.add('text-button');
+
+    if (styleClasses) {
+      this.domElement.classList.add(...styleClasses);
     }
 
-    this.domElement.innerHTML = this.properties.RU.SHIFT_OFF;
-    this.domElement.onButtonDown = onButtonDown;
-    this.domElement.onButtonUp = onButtonUp;
-    this.domElement.state = state;
+    this.domElement.onButtonDown = () => onButtonDown(this.domElement);
+    this.domElement.onButtonUp = () => onButtonUp(this.domElement);
 
     state.subscribe(({ lang, shiftMode }) => {
-      this.domElement.innerHTML = this.properties[lang][shiftMode];
+      this.domElement.innerHTML = content[lang][shiftMode];
     });
   }
 

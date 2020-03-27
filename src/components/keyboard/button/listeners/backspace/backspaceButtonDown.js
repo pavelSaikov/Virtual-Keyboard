@@ -1,6 +1,4 @@
 export default function backspaceButtonDown() {
-  if (!this.classList.contains('down')) this.classList.add('down');
-
   const textArea = document.querySelector('.text-area');
 
   const cursorPosition = textArea.selectionStart;

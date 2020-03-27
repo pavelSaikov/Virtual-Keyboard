@@ -1,6 +1,5 @@
-export default function capsLockButtonDown() {
-  if (!this.classList.contains('down')) this.classList.add('down');
-  else this.classList.remove('down');
+import state from '../../../../state/State';
 
-  this.state.changeShiftMode();
+export default function capsLockButtonDown() {
+  state.changeShiftMode();
 }

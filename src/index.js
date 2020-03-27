@@ -12,8 +12,7 @@ import './index.scss';
 
 const textArea = createTextArea();
 
-const state = new State();
-const keyboard = new Keyboard(state);
+const keyboard = new Keyboard(State);
 keyboard.getKeyboard().addEventListener('mousedown', mouseDown);
 keyboard.getKeyboard().addEventListener('mouseup', mouseUp);
 
@@ -24,4 +23,4 @@ wrapper.append(keyboard.getKeyboard());
 document.body.append(wrapper);
 document.addEventListener('keydown', keyDown);
 document.addEventListener('keyup', keyUp);
-document.addEventListener('keydown', createChangeLanguageListener(state));
+document.addEventListener('keydown', createChangeLanguageListener(State));

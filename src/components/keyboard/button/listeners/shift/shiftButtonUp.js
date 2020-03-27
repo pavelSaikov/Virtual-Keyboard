@@ -1,4 +1,5 @@
+import state from '../../../../state/State';
+
 export default function shiftButtonUp() {
-  this.state.shiftReleased();
-  this.classList.remove('down');
+  state.changeShiftMode();
 }

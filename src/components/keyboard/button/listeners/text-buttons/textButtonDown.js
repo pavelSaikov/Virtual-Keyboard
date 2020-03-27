@@ -1,7 +1,6 @@
-export default function textButtonDown() {
-  if (!this.classList.contains('down')) this.classList.add('down');
+export default function textButtonDown(button) {
   const textArea = document.querySelector('.text-area');
 
   const cursorPosition = textArea.selectionStart;
-  textArea.setRangeText(this.innerText, cursorPosition, cursorPosition, 'end');
+  textArea.setRangeText(button.innerText, cursorPosition, cursorPosition, 'end');
 }

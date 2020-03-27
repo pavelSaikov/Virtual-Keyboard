@@ -18,7 +18,7 @@ const BUTTONS_CONFIG = {
   },
   TAB: { RU: { SHIFT_OFF: 'Tab', SHIFT_ON: 'Tab' }, EN: { SHIFT_OFF: 'Tab', SHIFT_ON: 'Tab' } },
   Q: { RU: { SHIFT_OFF: 'й', SHIFT_ON: 'Й' }, EN: { SHIFT_OFF: 'q', SHIFT_ON: 'Q' } },
-  W: { RU: { SHIFT_OFF: 'ц', SHIFT_ON: 'Ц' }, EN: { SHIFT_OFF: 'e', SHIFT_ON: 'W' } },
+  W: { RU: { SHIFT_OFF: 'ц', SHIFT_ON: 'Ц' }, EN: { SHIFT_OFF: 'w', SHIFT_ON: 'W' } },
   E: { RU: { SHIFT_OFF: 'у', SHIFT_ON: 'У' }, EN: { SHIFT_OFF: 'e', SHIFT_ON: 'E' } },
   R: { RU: { SHIFT_OFF: 'к', SHIFT_ON: 'К' }, EN: { SHIFT_OFF: 'r', SHIFT_ON: 'R' } },
   T: { RU: { SHIFT_OFF: 'е', SHIFT_ON: 'Е' }, EN: { SHIFT_OFF: 't', SHIFT_ON: 'T' } },
@@ -45,10 +45,16 @@ const BUTTONS_CONFIG = {
   L: { RU: { SHIFT_OFF: 'д', SHIFT_ON: 'Д' }, EN: { SHIFT_OFF: 'l', SHIFT_ON: 'L' } },
   ';': { RU: { SHIFT_OFF: 'ж', SHIFT_ON: 'Ж' }, EN: { SHIFT_OFF: ';', SHIFT_ON: ':' } },
   // eslint-disable-next-line quotes
-  "'": { RU: { SHIFT_OFF: 'э', SHIFT_ON: 'Э' }, EN: { SHIFT_OFF: "'", SHIFT_ON: '"' } },
+  QUOTE: { RU: { SHIFT_OFF: 'э', SHIFT_ON: 'Э' }, EN: { SHIFT_OFF: "'", SHIFT_ON: '"' } },
   '\\': { RU: { SHIFT_OFF: '\\', SHIFT_ON: '/' }, EN: { SHIFT_OFF: '\\', SHIFT_ON: '|' } },
-  ENTER: { RU: { SHIFT_OFF: 'Enter', SHIFT_ON: 'Enter' }, EN: { SHIFT_OFF: 'Enter', SHIFT_ON: 'Enter' } },
-  SHIFT: { RU: { SHIFT_OFF: 'Shift', SHIFT_ON: 'Shift' }, EN: { SHIFT_OFF: 'Shift', SHIFT_ON: 'Shift' } },
+  ENTER: {
+    RU: { SHIFT_OFF: 'Enter', SHIFT_ON: 'Enter' },
+    EN: { SHIFT_OFF: 'Enter', SHIFT_ON: 'Enter' },
+  },
+  SHIFT: {
+    RU: { SHIFT_OFF: 'Shift', SHIFT_ON: 'Shift' },
+    EN: { SHIFT_OFF: 'Shift', SHIFT_ON: 'Shift' },
+  },
   Z: { RU: { SHIFT_OFF: 'я', SHIFT_ON: 'Я' }, EN: { SHIFT_OFF: 'z', SHIFT_ON: 'Z' } },
   X: { RU: { SHIFT_OFF: 'ч', SHIFT_ON: 'Ч' }, EN: { SHIFT_OFF: 'x', SHIFT_ON: 'X' } },
   C: { RU: { SHIFT_OFF: 'с', SHIFT_ON: 'С' }, EN: { SHIFT_OFF: 'c', SHIFT_ON: 'C' } },
@@ -59,12 +65,27 @@ const BUTTONS_CONFIG = {
   '<': { RU: { SHIFT_OFF: 'б', SHIFT_ON: 'Б' }, EN: { SHIFT_OFF: ',', SHIFT_ON: '<' } },
   '>': { RU: { SHIFT_OFF: 'ю', SHIFT_ON: 'Ю' }, EN: { SHIFT_OFF: '.', SHIFT_ON: '>' } },
   '/': { RU: { SHIFT_OFF: '.', SHIFT_ON: ',' }, EN: { SHIFT_OFF: '/', SHIFT_ON: '?' } },
-  CTRL: { RU: { SHIFT_OFF: 'Ctrl', SHIFT_ON: 'Ctrl' }, EN: { SHIFT_OFF: 'Ctrl', SHIFT_ON: 'Ctrl' } },
+  CTRL: {
+    RU: { SHIFT_OFF: 'Ctrl', SHIFT_ON: 'Ctrl' },
+    EN: { SHIFT_OFF: 'Ctrl', SHIFT_ON: 'Ctrl' },
+  },
   ALT: { RU: { SHIFT_OFF: 'Alt', SHIFT_ON: 'Alt' }, EN: { SHIFT_OFF: 'Alt', SHIFT_ON: 'Alt' } },
-  ARROW_UP: { RU: { SHIFT_OFF: '&#9650', SHIFT_ON: '&#9650' }, EN: { SHIFT_OFF: '&#9650', SHIFT_ON: '&#9650' } },
-  ARROW_DOWN: { RU: { SHIFT_OFF: '&#9660;', SHIFT_ON: '&#9660;' }, EN: { SHIFT_OFF: '&#9660;', SHIFT_ON: '&#9660;' } },
-  ARROW_LEFT: { RU: { SHIFT_OFF: '&#9668;', SHIFT_ON: '&#9668;' }, EN: { SHIFT_OFF: '&#9668;', SHIFT_ON: '&#9668;' } },
-  ARROW_RIGHT: { RU: { SHIFT_OFF: '&#9658;', SHIFT_ON: '&#9658;' }, EN: { SHIFT_OFF: '&#9658;', SHIFT_ON: '&#9658;' } },
+  ARROW_UP: {
+    RU: { SHIFT_OFF: '&#9650', SHIFT_ON: '&#9650' },
+    EN: { SHIFT_OFF: '&#9650', SHIFT_ON: '&#9650' },
+  },
+  ARROW_DOWN: {
+    RU: { SHIFT_OFF: '&#9660;', SHIFT_ON: '&#9660;' },
+    EN: { SHIFT_OFF: '&#9660;', SHIFT_ON: '&#9660;' },
+  },
+  ARROW_LEFT: {
+    RU: { SHIFT_OFF: '&#9668;', SHIFT_ON: '&#9668;' },
+    EN: { SHIFT_OFF: '&#9668;', SHIFT_ON: '&#9668;' },
+  },
+  ARROW_RIGHT: {
+    RU: { SHIFT_OFF: '&#9658;', SHIFT_ON: '&#9658;' },
+    EN: { SHIFT_OFF: '&#9658;', SHIFT_ON: '&#9658;' },
+  },
   WIN: { RU: { SHIFT_OFF: 'WIN', SHIFT_ON: 'WIN' }, EN: { SHIFT_OFF: 'WIN', SHIFT_ON: 'WIN' } },
   SPACE: { RU: { SHIFT_OFF: ' ', SHIFT_ON: ' ' }, EN: { SHIFT_OFF: ' ', SHIFT_ON: ' ' } },
 };
