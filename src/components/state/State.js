@@ -7,14 +7,13 @@ const DEFAULT_STATE = { lang: LANGUAGE.EN, shiftMode: SHIFT_MODE.SHIFT_OFF };
 class State {
   constructor() {
     this.subscribers = [];
-    if (localStorage.getItem('lang') !== null && localStorage.getItem('shiftMode') !== null) {
-      this.state = {
-        lang: localStorage.getItem('lang'),
-        shiftMode: localStorage.getItem('shiftMode'),
-      };
-    } else {
-      this.state = DEFAULT_STATE;
-    }
+    const storedLang = localStorage.getItem('lang');
+    this.state = storedLang
+      ? {
+          ...DEFAULT_STATE,
+          lang: storedLang,
+        }
+      : DEFAULT_STATE;
   }
 
   changeLanguage() {
@@ -23,6 +22,7 @@ class State {
       lang: this.state.lang === LANGUAGE.EN ? LANGUAGE.RU : LANGUAGE.EN,
     };
     this.notifySubscribes();
+    localStorage.setItem('lang', this.state.lang);
   }
 
   changeShiftMode() {

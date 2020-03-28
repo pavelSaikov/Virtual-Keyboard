@@ -24,7 +24,3 @@ document.body.append(wrapper);
 document.addEventListener('keydown', keyDown);
 document.addEventListener('keyup', keyUp);
 document.addEventListener('keydown', createChangeLanguageListener(State));
-window.addEventListener('unload', () => {
-  localStorage.setItem('lang', State.getCurrentState().lang);
-  localStorage.setItem('shiftMode', 'SHIFT_OFF');
-});
