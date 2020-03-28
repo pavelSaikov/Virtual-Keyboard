@@ -4,7 +4,11 @@ export default function keyDown(e) {
 
   if (domElement !== null && !((e.code === 'ShiftLeft' || e.code === 'ShiftRight') && e.repeat === true)) {
     domElement.onButtonDown();
-    domElement.classList.toggle('down');
+    if (code === 'CapsLock') {
+      domElement.classList.toggle('down');
+    } else {
+      domElement.classList.add('down');
+    }
   }
   e.preventDefault();
 }
