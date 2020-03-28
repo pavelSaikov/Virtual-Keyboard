@@ -1,0 +1,69 @@
+.text-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.25s;
+    font-size: 19px;
+    background-color: #444444;
+    &.down {
+      background-color: #79aa89;
+      border-radius: 18px;
+    }
+  }
+
+  .service-button {
+    font-size: 17px;
+    font-weight: 600;
+    width: 150px;
+    background-color: #222222;
+    &.down {
+      background-color: #2cfd72;
+    }
+  }
+
+  .arrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .second-row {
+    & > .Tab {
+      width: 75px;
+    }
+
+    & > .Delete {
+      width: 85px;
+    }
+  }
+
+  .third-row {
+    & > .Enter {
+      width: 110px;
+    }
+  }
+
+  .fourth-row {
+    & > .ShiftLeft {
+      width: 80px;
+    }
+  }
+
+  .fifth-row {
+    & > .Space {
+      width: 430px;
+    }
+
+    & > .alt,
+    .meta {
+      width: 50px;
+    }
+
+    & > .control {
+      width: 85px;
+    }
+  }

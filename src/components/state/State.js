@@ -7,7 +7,6 @@ const DEFAULT_STATE = { lang: LANGUAGE.EN, shiftMode: SHIFT_MODE.SHIFT_OFF };
 class State {
   constructor() {
     this.subscribers = [];
-    // this.state = DEFAULT_STATE;
     if (localStorage.getItem('lang') !== null && localStorage.getItem('shiftMode') !== null) {
       this.state = {
         lang: localStorage.getItem('lang'),
@@ -16,9 +15,6 @@ class State {
     } else {
       this.state = DEFAULT_STATE;
     }
-    //   localStorage.getItem('DEFAULT_STATE') === null
-    //     ? DEFAULT_STATE
-    //     : localStorage.getItem('DEFAULT_STATE');
   }
 
   changeLanguage() {

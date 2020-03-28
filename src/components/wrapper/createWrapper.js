@@ -1,3 +1,4 @@
+import './wrapper.scss';
 import wrapperClasses from './wrapper.models';
 
 export default function createWrapper() {

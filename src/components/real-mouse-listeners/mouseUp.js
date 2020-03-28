@@ -1,10 +1,8 @@
 export default function mouseUp(e) {
   const { target } = e;
 
-  if (e.which === 1) {
-    if (target.classList.contains('text-button')) {
-      target.classList.toggle('down');
-      target.onButtonUp();
-    }
+  if (e.which === 1 && target.classList.contains('text-button')) {
+    target.classList.toggle('down');
+    target.onButtonUp();
   }
 }

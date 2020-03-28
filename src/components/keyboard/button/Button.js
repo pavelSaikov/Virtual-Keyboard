@@ -1,3 +1,6 @@
+import './buttons.scss';
+
+
 export default class Button {
   constructor({
     content,

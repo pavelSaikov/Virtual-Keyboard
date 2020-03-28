@@ -1,3 +1,5 @@
+import './keyboard.scss';
+
 import Button from './button/Button';
 import BUTTON_MODELS from './button/button-config.models';
 import BUTTON_CLASSES from './button/button-classes.models';
@@ -40,13 +42,6 @@ class Keyboard {
   createFirstRow() {
     this.firstRow = Keyboard.createRowDomElement();
     this.firstRow.classList.add('first-row');
-
-    const obj = {
-      content: BUTTON_MODELS['~'],
-      state: this.state,
-      onButtonDown: textButtonDown,
-      styleClasses: ['Backquote'],
-    };
 
     const TILDA = new Button({
       content: BUTTON_MODELS['~'],
