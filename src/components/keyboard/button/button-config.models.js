@@ -44,8 +44,7 @@ const BUTTONS_CONFIG = {
   K: { RU: { SHIFT_OFF: 'л', SHIFT_ON: 'Л' }, EN: { SHIFT_OFF: 'k', SHIFT_ON: 'K' } },
   L: { RU: { SHIFT_OFF: 'д', SHIFT_ON: 'Д' }, EN: { SHIFT_OFF: 'l', SHIFT_ON: 'L' } },
   ';': { RU: { SHIFT_OFF: 'ж', SHIFT_ON: 'Ж' }, EN: { SHIFT_OFF: ';', SHIFT_ON: ':' } },
-  // eslint-disable-next-line quotes
-  QUOTE: { RU: { SHIFT_OFF: 'э', SHIFT_ON: 'Э' }, EN: { SHIFT_OFF: "'", SHIFT_ON: '"' } },
+  QUOTE: { RU: { SHIFT_OFF: 'э', SHIFT_ON: 'Э' }, EN: { SHIFT_OFF: '\'', SHIFT_ON: '"' } },
   '\\': { RU: { SHIFT_OFF: '\\', SHIFT_ON: '/' }, EN: { SHIFT_OFF: '\\', SHIFT_ON: '|' } },
   ENTER: {
     RU: { SHIFT_OFF: 'Enter', SHIFT_ON: 'Enter' },

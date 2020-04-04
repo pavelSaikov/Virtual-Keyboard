@@ -1,4 +1,4 @@
-// import { DEFAULT_STATE, LANGUAGE, SHIFT_MODE } from './state.models';
+
 const LANGUAGE = { RU: 'RU', EN: 'EN' };
 const SHIFT_MODE = { SHIFT_OFF: 'SHIFT_OFF', SHIFT_ON: 'SHIFT_ON' };
 
@@ -9,10 +9,7 @@ class State {
     this.subscribers = [];
     const storedLang = localStorage.getItem('lang');
     this.state = storedLang
-      ? {
-          ...DEFAULT_STATE,
-          lang: storedLang,
-        }
+      ? { ...DEFAULT_STATE, lang: storedLang }
       : DEFAULT_STATE;
   }
 
