@@ -7,6 +7,7 @@ import mouseUp from './components/real-mouse-listeners/mouseUp';
 import keyDown from './components/real-keyboard-listeners/keyDown';
 import keyUp from './components/real-keyboard-listeners/keyUp';
 import createChangeLanguageListener from './components/real-keyboard-listeners/createChangeLanguageListener';
+import createNote from './components/note/note';
 
 import './index.scss';
 
@@ -16,9 +17,12 @@ const keyboard = new Keyboard(State);
 keyboard.getKeyboard().addEventListener('mousedown', mouseDown);
 keyboard.getKeyboard().addEventListener('mouseup', mouseUp);
 
+const note = createNote();
+
 const wrapper = createWrapper();
 wrapper.append(textArea);
 wrapper.append(keyboard.getKeyboard());
+wrapper.append(note);
 
 document.body.append(wrapper);
 document.addEventListener('keydown', keyDown);
